@@ -1,11 +1,138 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+@import "base";
 
-body{
-    width: 100vw;
-    min-height: 100vh;
+// header start
+header {
+  nav {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-    .container{
-        background-color: aqua;
-        h1{color: red;}
+    .logo {
+      display: flex;
+      align-items: center;
+
+      .fa-solid {
+        color: red;
+        font-size: 3em;
+      }
+
+      span {
+        color: red;
+      }
     }
+
+    ul {
+      li {
+        display: inline-block;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+          color: black;
+          margin-right: 1em;
+          font-size: 2em;
+          font-weight: bolder;
+        }
+      }
+    }
+    a:hover {
+      padding: 0.2em;
+      background-color: black;
+      color: white;
+      border-radius: 0.1em;
+    }
+  }
+}
+// header end
+
+// main start
+main {
+  // hero section
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    // background-color: #e0e2f0;
+    background: linear-gradient(to right, #e0e2f0, rgba(79, 185, 203, 0.5));
+
+    span {
+      color: red;
+      font-weight: bold;
+    }
+
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+
+  //   about section
+
+  .about-me {
+    height: 100vh;
+    // background-color: #a2cbcc;
+    background: rgba(79, 185, 203, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .profile {
+      padding: 2em;
+      height: 800px;
+      width: 800px;
+
+      margin-left: 1em;
+
+      h2 {
+        text-align: center;
+        font-size: 50px;
+      }
+    }
+    p,
+    ul {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .skills {
+      padding-top: 1em;
+
+      .dot {
+        padding-left: 1em;
+        list-style-type: circle;
+      }
+
+      h3 {
+        font-size: 30px;
+        margin-top: 0.5em;
+      }
+      ul {
+        list-style-type: none;
+      }
+    }
+  }
+
+  //   contact section
+  .my-contact {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(79, 185, 203, 0.5), #e0e2f0);
+
+    h2 {
+      text-align: center;
+      font-size: 70px;
+      padding-top: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .about-me {
+    overflow-y: scroll;
+  }
 }
