@@ -1,4 +1,5 @@
 @import "base";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // header start
 header {
@@ -21,7 +22,7 @@ header {
       }
 
       span {
-        color: white;
+        color: red;
       }
     }
 
@@ -52,17 +53,17 @@ header {
 // main start
 main {
   min-height: 100vh;
+  // min-height: calc(100vh - 80px - 65px);
 
   // hero section
   .hero {
     .bg-img {
       background-image: url(./images/bckg.jpeg);
-
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       height: 100vh;
-      filter: blur(7);
+      filter: blur(5);
     }
 
     .intro {
@@ -74,13 +75,13 @@ main {
       width: 50%;
       padding: 40px 0;
       text-align: center;
-      border-top-right-radius: 50px;
-      border-bottom-left-radius: 50px;
+      // border-top-right-radius: 50px;
+      // border-bottom-left-radius: 50px;
 
-      background-color: rgba(0, 0, 0, 0.5);
+      // background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       font-weight: bold;
-      border: 10px solid white;
+      // border: 10px solid white;
 
       p {
         margin-top: 1em;
@@ -103,105 +104,210 @@ main {
   //   about section
 
   .about-me {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 600px);
-    grid-template-rows: 600px;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    border-bottom: 2px solid red;
 
-    padding: 15em;
-    gap: 1em;
-
-    .current {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      padding: 3em;
-
-      h2 {
-        font-size: 2.5em;
-        margin-bottom: 1em;
-      }
-      p {
-        margin-bottom: 1em;
-        font-size: 2em;
-      }
+    .pic {
+      text-align: center;
+      margin-top: 2rem;
     }
+
     .profile {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-
-      .pic img {
-        width: 400px;
-        margin-right: 1em;
-      }
+      margin: 2rem;
+      flex-wrap: wrap;
 
       .me {
-        font-size: 2em;
-        padding: 2em;
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+      }
+
+      .program {
+        width: 500px;
+        height: 500px;
+        background-color: green;
       }
     }
   }
 
   //   contact section
+
   .my-contact {
     height: 100vh;
 
     h2 {
       text-align: center;
-      font-size: 70px;
-      padding-top: 1em;
+      padding-top: 2em;
+      font-size: 3vw;
+    }
+
+    form {
+      background-color: rgba(27, 31, 34, 0.8);
+      width: 700px;
+      margin: 70px auto;
+      max-width: 90%;
+      border-radius: 3em;
+      padding: 2em;
+      color: white;
+
+      .title {
+        text-transform: uppercase;
+        letter-spacing: 1em;
+        border-bottom: 1px solid white;
+        display: inline-block;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+      }
+
+      .half {
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1em;
+          width: 45%;
+
+          input {
+            border-radius: 5px;
+            border: 1px solid white;
+            outline-color: grey;
+            padding: 15px;
+            width: 100%;
+            height: 40%;
+            background: transparent;
+          }
+        }
+      }
+
+      label {
+        display: block;
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-bottom: 1em;
+      }
+
+      .full {
+        margin-bottom: 20px;
+
+        textarea {
+          background: transparent;
+          border-radius: 5px;
+          border: 1px solid white;
+          outline: 0;
+          padding: 10px;
+          width: 100%;
+        }
+      }
+
+      .action {
+        margin-bottom: 20px;
+
+        input {
+          background: transparent;
+          border-radius: 5px;
+          border: 1px solid white;
+          cursor: pointer;
+          font-size: 1.5em;
+          font-weight: bold;
+          height: 40px;
+          width: 90px;
+          outline: 0;
+          padding: 5px;
+        }
+      }
+
+      .action input[type="submit"] {
+        background: black;
+        color: white;
+      }
+
+      .action input:hover {
+        background-color: red;
+      }
+
+      .item input:focus,
+      textarea:focus:hover {
+        background-color: grey;
+      }
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 3em;
+    }
+
+    .contact2 {
+      display: flex;
+      justify-content: center;
+
+      .fa-solid {
+        font-size: 3em;
+        color: black;
+        margin: 1em;
+      }
     }
   }
 }
 
-@media screen and (max-width: 1190px) {
-  .about-me {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
+footer {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .copyright {
+    margin-left: 1em;
+    font-size: 1.5em;
+  }
+
+  .icon {
+    font-size: 2em;
+
+    ul {
+      li {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: 1em;
+        a {
+          color: white;
+          margin-left: 2em;
+        }
+      }
+    }
+    a:hover {
+      color: red;
+    }
   }
 }
 
-// @media screen and (max-width: 590px) {
-//   html,
-//   body {
-//     width: 100%;
-//     height: 100%;
-//     margin: 0;
-//     padding: 0;
-//     overflow-x: hidden;
-//   }
+@media screen and (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  form {
+    .half {
+      flex-direction: column;
 
-//   .about-me {
-//     .profile {
-//       text-align: center;
-//       p {
-//         padding: 0 2em;
-//       }
-//     }
-//   }
-// }
+      .item input {
+        width: 100%;
+      }
+    }
+  }
 
-// @media screen and (max-width: 900px) {
-//   .about-me {
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     align-items: center;
-
-//     .current {
-//       text-align: center;
-//     }
-//     .profile {
-//       text-align: center;
-
-//       display: flex;
-//       flex-wrap: wrap;
-//     }
-//   }
-// }
+  .contact2 {
+    flex-direction: column;
+  }
+}
