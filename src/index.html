@@ -19,17 +19,19 @@
   <body>
     <!-- header start -->
     <header>
-      <nav>
-        <div class="logo">
-          <i class="fa-solid fa-laptop-code"></i>
-          <h2><span>Ican</span>DoIt</h2>
-        </div>
-        <ul>
-          <li><a href="#home">Home</a></li>
+      <div class="logo">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h2><span>Ican</span>DoIt</h2>
+      </div>
+      <div class="navigation">
+        <input class="toggle-menu" type="checkbox" />
+        <div class="hambg"></div>
+        <ul class="menu">
+          <li><a class="active" href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
     <!-- header end -->
 
@@ -72,28 +74,24 @@
             </p>
           </div>
         </div>
+        <div class="next">
+          <a href="#contact"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
       </section>
       <section class="my-contact" id="contact">
         <h2>Contact me</h2>
         <div class="contact-container">
           <div class="contact2">
+            <h3>email</h3>
+            <p>agatha@aims.ac.tz</p>
+            <h3>phone</h3>
+            <p>000078656</p>
+            <h3>address</h3>
             <address>
               Agatha Augustine Msola, <br />
               Koksche str 31, <br />
               49080, Osnabrueck. <br />
-              Germany.
-              <!--<p>
-                <i class="fa-solid fa-location" title="Osnabrueck"></i>
-                49080 Osnabrueck, Germany
-              </p>
-              <p>
-                <i class="fa-solid fa-phone" title="+358417443525"></i
-                >+358417443525
-              </p>
-              <p>
-                <i class="fa-solid fa-at" title="agatha@aims.ac.tz"></i
-                >agatha@aims.ac.tz
-              </p> -->
+              Germany. <br />
             </address>
           </div>
 
@@ -117,7 +115,9 @@
             </div>
           </form>
         </div>
-        <!-- <div class="location">1</div> -->
+        <div class="top">
+          <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
       </section>
     </main>
     <footer>
