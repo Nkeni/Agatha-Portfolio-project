@@ -210,7 +210,6 @@ main {
     }
 
     .profile {
-      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -288,9 +287,6 @@ main {
     min-height: 100vh;
     background: linear-gradient(to right, rgb(170, 205, 205), white);
 
-    background-repeat: no-repeat;
-    background-size: cover;
-
     h2 {
       text-align: center;
       padding-top: 1em;
@@ -300,7 +296,7 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 5em;
+      padding: 1em;
       flex-wrap: wrap;
 
       form {
@@ -479,16 +475,16 @@ footer {
     width: 100%;
     .half {
       flex-direction: column;
-
-      .item label {
-        color: red;
-      }
     }
   }
 
-  .profile {
-    .program {
+  .about-me {
+    .profile {
       min-height: 100vh;
+      .program {
+        min-height: 100vh;
+        overflow: scroll;
+      }
     }
   }
 
@@ -542,7 +538,18 @@ footer {
     }
   }
 
-  .contact2 {
-    margin-bottom: 0 2em 2em 0;
+  .my-contact {
+    .contact-container {
+      min-height: 100vh;
+      .contact2 {
+        padding: 1em 0 2em 1em;
+      }
+    }
+  }
+
+  footer {
+    .copyright {
+      font-size: 0.8em;
+    }
   }
 }
