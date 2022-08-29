@@ -1,4 +1,26 @@
 @import "base";
+
+@mixin myinfo {
+  width: 500px;
+  height: 500px;
+  padding: 2rem;
+  border: 1px solid grey;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 2em;
+  background-color: white;
+}
+
+@mixin myprojects {
+  width: 600px;
+  height: 400px;
+
+  padding: 2em;
+
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: rgb(205, 248, 221);
+}
+
+$color-one: red;
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // header start
@@ -16,12 +38,12 @@ header {
     margin-left: 1em;
 
     .fa-solid {
-      color: red;
+      color: $color-one;
       font-size: 3em;
     }
 
     span {
-      color: red;
+      color: $color-one;
     }
   }
 
@@ -42,7 +64,7 @@ header {
 
         a {
           text-decoration: none;
-          color: red;
+          color: $color-one;
           display: block;
           text-transform: uppercase;
           padding: 40px 25px;
@@ -164,12 +186,14 @@ main {
     h1 {
       font-size: 50px;
       text-transform: uppercase;
+      letter-spacing: 0.2em;
     }
 
     h3 {
       text-transform: uppercase;
       margin-top: 1em;
       font-size: 30px;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -203,29 +227,15 @@ main {
       border: 1px solid grey;
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
       gap: 1em;
-      // background-color: rgb(0, 217, 255);
 
       .me {
-        width: 500px;
-        height: 500px;
-        padding: 2rem;
-        border: 1px solid grey;
+        @include myinfo;
         margin: 2em 0;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
-        border-radius: 2em;
-        background-color: white;
       }
 
       .program {
-        width: 500px;
-        height: 500px;
-        padding: 2rem;
-
-        border: 1px solid grey;
+        @include myinfo;
         margin: 2em 0 1em;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
-        border-radius: 2em;
-        background-color: white;
       }
     }
     .next {
@@ -234,11 +244,56 @@ main {
     }
   }
 
+  // projects
+
+  .project {
+    min-height: 100vh;
+    padding: 2em;
+    background-image: url(./images/tutor7.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    border-bottom: 1px solid red;
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .future-projects {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      height: 100vh;
+      gap: 1em;
+      padding-top: 3em;
+
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 1.5em;
+      }
+
+      .tutor-web {
+        @include myprojects;
+        border-top-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+      }
+      .swahili-app {
+        @include myprojects;
+        border-top-right-radius: 2em;
+        border-bottom-left-radius: 2em;
+      }
+    }
+  }
+
   //   contact section
 
   .my-contact {
     min-height: 100vh;
-    background: rgb(200, 195, 195);
+    background: white;
 
     h2 {
       text-align: center;
@@ -253,7 +308,7 @@ main {
       flex-wrap: wrap;
 
       form {
-        background-color: rgb(173, 210, 210);
+        background-color: rgb(215, 210, 210);
         width: 700px;
         height: 600px;
         max-width: 90%;
@@ -337,7 +392,7 @@ main {
         }
 
         .action input:hover {
-          background-color: red;
+          background-color: $color-one;
         }
 
         .item input:focus,
@@ -358,9 +413,14 @@ main {
         }
         h3 {
           font-size: 20px;
-          color: red;
+          color: $color-one;
           font-weight: bold;
           text-transform: uppercase;
+
+          .fa-brands {
+            color: green;
+            font-size: 1.5em;
+          }
         }
 
         p {
@@ -405,7 +465,7 @@ footer {
       }
     }
     a:hover {
-      color: red;
+      color: $color-one;
     }
   }
 }
@@ -435,10 +495,6 @@ footer {
       min-height: 100vh;
     }
   }
-
-  .contact2 {
-    margin-bottom: 2em;
-  }
 }
 
 // hambuger
@@ -449,7 +505,7 @@ footer {
       .hambg,
       .toggle-menu {
         display: block;
-        background: red;
+        background: $color-one;
       }
 
       .menu {
@@ -474,5 +530,9 @@ footer {
         }
       }
     }
+  }
+
+  .contact2 {
+    margin-bottom: 2em;
   }
 }
