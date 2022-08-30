@@ -452,7 +452,7 @@ footer {
         margin-right: 1em;
         a {
           color: white;
-          margin-left: 2em;
+          // margin-left: 2em;
         }
       }
     }
@@ -504,7 +504,6 @@ footer {
 // hambuger
 @media screen and (max-width: 800px) {
   header {
-    // padding: 10px 20px;
     nav {
       .navigation {
         .hambg,
@@ -543,6 +542,14 @@ footer {
       min-height: 100vh;
       .contact2 {
         padding: 1em 0 2em 1em;
+
+        address {
+          font-size: 20px;
+        }
+
+        h3 {
+          font-size: 15px;
+        }
       }
     }
   }
