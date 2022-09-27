@@ -194,10 +194,10 @@ main {
 
   .about-me {
     min-height: 100vh;
+    padding-top: 7rem;
 
     .pic {
       text-align: center;
-      padding-top: 2rem;
     }
 
     h2 {
@@ -240,15 +240,12 @@ main {
 
   .project {
     min-height: 100vh;
-    padding: 2em;
-    background-image: url(./images/tutor9.webp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    padding-top: 6em;
 
     h2 {
       text-align: center;
       font-size: 2em;
+      padding-top: 1em;
     }
 
     .future-projects {
@@ -257,7 +254,7 @@ main {
       justify-content: space-around;
       flex-wrap: wrap;
       gap: 1em;
-      padding-top: 3em;
+      padding-top: 4em;
 
       h3 {
         font-size: 1.5em;
@@ -285,22 +282,25 @@ main {
 
   .my-contact {
     min-height: 100vh;
-    background: linear-gradient(to right, rgb(170, 205, 205), white);
+    margin-top: 2em;
+    background: rgb(205, 248, 244);
+    flex-wrap: wrap;
 
     h2 {
       text-align: center;
-      padding-top: 1em;
+      padding-top: 2em;
       font-size: 50px;
     }
     .contact-container {
       display: flex;
-      justify-content: space-between;
+
+      justify-content: center;
       align-items: center;
       padding: 1em;
       flex-wrap: wrap;
 
       form {
-        background-color: rgb(215, 210, 210);
+        // background-color: white;
         width: 700px;
         height: 600px;
         max-width: 90%;
@@ -389,7 +389,7 @@ main {
 
         .item input:focus,
         textarea:focus:hover {
-          background-color: white;
+          background-color: rgb(203, 198, 198);
         }
       }
 
@@ -397,33 +397,41 @@ main {
         text-align: center;
         font-size: 3em;
       }
-
-      .contact2 {
-        letter-spacing: 2px;
-        address {
-          font-size: 30px;
-        }
-        h3 {
-          font-size: 20px;
-          color: $color-one;
-          font-weight: bold;
-          text-transform: uppercase;
-
-          .fa-brands {
-            color: green;
-            font-size: 1.5em;
-          }
-        }
-
-        p {
-          font-size: 30px;
-          margin-bottom: 1em;
-        }
-      }
     }
     .top {
       text-align: center;
       font-size: 3em;
+    }
+  }
+
+  .contactinfo {
+    display: flex;
+    justify-content: center;
+
+    .contact2 {
+      letter-spacing: 2px;
+      padding: 2em;
+
+      address {
+        font-size: 30px;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: $color-one;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        .fa-brands {
+          color: green;
+          font-size: 1.5em;
+        }
+      }
+
+      p {
+        font-size: 30px;
+        margin-bottom: 1em;
+      }
     }
   }
 }
@@ -452,7 +460,6 @@ footer {
         margin-right: 1em;
         a {
           color: white;
-          // margin-left: 2em;
         }
       }
     }
@@ -462,7 +469,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   html,
   body {
     width: 100%;
@@ -471,10 +478,16 @@ footer {
     padding: 0;
     overflow-x: hidden;
   }
-  form {
-    width: 100%;
-    .half {
-      flex-direction: column;
+
+  .my-contact {
+    .contact-container {
+      min-height: 100vh;
+      form {
+        width: 100%;
+        .half {
+          flex-direction: column;
+        }
+      }
     }
   }
 
@@ -503,6 +516,11 @@ footer {
 
 // hambuger
 @media screen and (max-width: 800px) {
+  .hero {
+    .intro {
+      padding-left: 2em;
+    }
+  }
   header {
     nav {
       .navigation {
@@ -519,9 +537,9 @@ footer {
           position: fixed;
           top: 0;
           right: -300px;
-          background: aqua;
+          background: rgb(205, 248, 244);
           width: 300px;
-          height: 50vh;
+          height: 60vh;
           padding-top: 30px;
 
           li {
@@ -540,6 +558,7 @@ footer {
   .my-contact {
     .contact-container {
       min-height: 100vh;
+
       .contact2 {
         padding: 1em 0 2em 1em;
 
